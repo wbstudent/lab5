@@ -1,5 +1,6 @@
 #pragma once
-
+#include <vector>
+#include "Sample.h"
 /*
 - Stwórz klasę `Dataset`, zawierającą:
     - wektor obiektów klasy `Sample`,
@@ -8,5 +9,8 @@
 */
 
 class Dataset {
-	
+	std::vector<Sample> _samples;
+public:
+	void push_back(Sample sample);
+	std::vector<Sample> samples() { return _samples;}
 };

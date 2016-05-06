@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include "Sample.h"
 
 /*
@@ -8,5 +9,9 @@
 
 class Prediction : Sample
 {
-
+	int _prediction;
+public:
+	Prediction(int label, int prediction, std::vector<float> features);
+	static float accuracy(std::vector<Prediction> predictions);
+	
 };
